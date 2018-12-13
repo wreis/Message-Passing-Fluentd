@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "A fluentd publisher for Message::Passing",
    "author" : [
       "Wallace Reis <wallace@reis.me>"
    ],
@@ -37,6 +37,10 @@
       },
       "runtime" : {
          "requires" : {
+            "AnyEvent" : "0",
+            "Fluent::Logger" : "0",
+            "Moo" : "0",
+            "namespace::autoclean" : "0",
             "perl" : "5.008005"
          }
       },

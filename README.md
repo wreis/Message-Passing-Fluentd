@@ -10,6 +10,16 @@ Message::Passing::Fluentd - A fluentd publisher for Message::Passing
 
 A simple message output which publishes messages to a fluentd.
 
+# ATTRIBUTES
+
+## hostname
+
+The hostname of the fluentd server. Required.
+
+## port
+
+The port number of the fluentd server. Defaults to 24224.
+
 # AUTHOR
 
 Wallace Reis <wallace@reis.me>
