@@ -51,6 +51,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/wreis/Message-Passing-Fluentd/issues"
+      },
+      "homepage" : "https://github.com/wreis/Message-Passing-Fluentd",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/wreis/Message-Passing-Fluentd.git",
+         "web" : "https://github.com/wreis/Message-Passing-Fluentd"
+      }
+   },
    "version" : "0.01",
    "x_generated_by_perl" : "v5.20.2",
    "x_serialization_backend" : "Cpanel::JSON::XS version 4.08",
