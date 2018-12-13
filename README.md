@@ -1,14 +1,14 @@
 # NAME
 
-Message::Passing::Fluentd - Blah blah blah
+Message::Passing::Fluentd - A fluentd publisher for Message::Passing
 
 # SYNOPSIS
 
-    use Message::Passing::Fluentd;
+    $ message-pass --input STDIN --output Fluentd --output_options '{"hostname":"127.0.0.1","port":"24224"}'
 
 # DESCRIPTION
 
-Message::Passing::Fluentd is
+A simple message output which publishes messages to a fluentd.
 
 # AUTHOR
 

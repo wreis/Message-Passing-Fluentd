@@ -1,8 +1,36 @@
-package Message::Passing::Fluentd;
+package Message::Passing::Output::Fluentd;
 
 use Moo;
+use namespace::autoclean;
+use Try::Tiny;
+use JSON::MaybeXS qw( decode_json );
+use Message::Passing::Exception::Decoding;
 
-our $VERSION = '0.01';
+with qw(
+  Message::Passing::Fluentd::Role::HasAConnection
+  Message::Passing::Role::Output
+);
+
+has tag => ( is => 'ro', default => sub { 'app_log'  });
+
+sub consume {
+  my ($self, $msg) = @_;
+  $msg = try {
+    ref($msg) ? $msg : decode_json($msg)
+  } catch {
+    $self->error->consume(Message::Passing::Exception::Decoding->new(
+      exception => $_,
+      packed_data => $msg,
+    ));
+    return; # Explicit return undef
+  };
+  $self->connection_manager->connection->post(
+    delete($msg->{'tag'}) || $self->tag,
+    $msg
+  );
+}
+
+sub connected {}
 
 1;
 
