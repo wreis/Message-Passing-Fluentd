@@ -5,11 +5,7 @@ requires 'Fluent::Logger';
 requires 'AnyEvent';
 requires 'namespace::autoclean';
 requires 'JSON::MaybeXS';
-requires 'Message::Passing::Exception::Decoding';
-requires 'Message::Passing::Role::ConnectionManager';
-requires 'Message::Passing::Role::HasAConnection';
-requires 'Message::Passing::Role::HasHostnameAndPort';
-requires 'Message::Passing::Role::Output';
+requires 'Message::Passing';
 requires 'Try::Tiny';
 
 on test => sub {
