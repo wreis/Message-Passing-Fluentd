@@ -12,7 +12,7 @@ __END__
 
 =head1 NAME
 
-Message::Passing::Fluentd - A fluentd publisher for Message::Passing
+Message::Passing::Fluentd - Publish messages to Fluentd.
 
 =head1 SYNOPSIS
 
@@ -22,15 +22,9 @@ Message::Passing::Fluentd - A fluentd publisher for Message::Passing
 
 A simple message output which publishes messages to a fluentd.
 
-=head1 ATTRIBUTES
+=head1 SEE ALSO
 
-=head2 hostname
-
-The hostname of the fluentd server. Required.
-
-=head2 port
-
-The port number of the fluentd server. Defaults to 24224.
+L<Message::Passing::Output::Fluentd>
 
 =head1 AUTHOR
 
@@ -44,7 +38,5 @@ Copyright 2018- Wallace Reis
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
-
-=head1 SEE ALSO
 
 =cut
